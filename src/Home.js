@@ -1,29 +1,31 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Home = () => {
-  //   let name = "mario";
-
-  const [name, setName] = useState("mario");
-  const [age, setAge] = useState(55);
-
-  const handleClick = () => {
-    setName("luigi");
-    setAge(25);
-  };
-  // //    lesson 7
-  //    const hendelClickAgaine = (name, e) => {
-  //     console.log("Hallo" + name, e.target);
-  //   };
+  const [blogs, setBlogs] = useState([
+    {
+      id: 1,
+      title: "My new website",
+      body: "Lorem, ipsum dolor.",
+      author: "mario",
+    },
+    {
+      id: 2,
+      title: "Welcome",
+      body: "Lorem, ipsum dolor.",
+      author: "yoshi",
+    },
+    {
+      id: 3,
+      title: "Some dev tips",
+      body: "Lorem, ipsum dolor.",
+      author: "mario",
+    },
+  ]);
 
   return (
     <div className="home">
-      <h2>Home page</h2>
-      <p>{name}</p>
-      <p>{age}</p>
-      <button onClick={handleClick}>Click me</button>
-      {/* <button onClick={(e) => hendelClickAgaine("mario", e)}>
-        clcik me again
-      </button> */}
+      <BlogList list={blogs} title="All blogs" />
     </div>
   );
 };
