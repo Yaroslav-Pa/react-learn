@@ -4,6 +4,7 @@ import Navbar from "./Navbar.js";
 import Home from "./Home.js";
 import Create from "./Create.js";
 import BlogDetails from "./BlogDetails.js";
+import NotFound from "./NotFound.js";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/create" element={<Create />} />
             <Route exact path="/blogs/:id" element={<BlogDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>

@@ -101,3 +101,11 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.not-found {
+  text-align: center;
+}
+
+.not-found p {
+  margin: 10px 0;
+}
